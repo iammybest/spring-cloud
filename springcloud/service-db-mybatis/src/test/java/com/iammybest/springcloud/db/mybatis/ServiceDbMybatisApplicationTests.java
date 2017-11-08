@@ -1,4 +1,4 @@
-package com.iammybest.springcloud.pay;
+package com.iammybest.springcloud.db.mybatis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ServicePayApplicationTests {
+public class ServiceDbMybatisApplicationTests {
 
 	@Test
 	public void contextLoads() {
