@@ -7,8 +7,6 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>uitl-redis-lock</module>
-      <module>kafka-test</module>
   </modules>
 
 </project>

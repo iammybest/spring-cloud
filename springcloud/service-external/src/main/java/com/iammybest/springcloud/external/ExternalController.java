@@ -2,9 +2,11 @@ package com.iammybest.springcloud.external;
 
 import com.iammybest.springcloud.commons.RestResponse;
 import com.iammybest.springcloud.commons.ServerInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 
 /**
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Time 18:09
  */
 @RestController
+@RequestMapping("/api")
 public class ExternalController {
 
     /**
@@ -32,8 +35,19 @@ public class ExternalController {
     @Value("${spring.application.name}")
     String serverName;
 
-    @RequestMapping("/test")
-    public RestResponse test() {
+    @Autowired
+    RestTemplate restTemplate;
+
+    @RequestMapping("/conf")
+    public RestResponse config() {
         return new RestResponse().setCode(1000).setMsg("success").setData(new ServerInfo(port, serverName).setVersion(version));
+    }
+
+    @RequestMapping("/internal/conf")
+    public RestResponse internalConfig() {
+        /**
+         * 调用服务接口
+         */
+        return restTemplate.getForObject("http://SERVICE-INTERNAL/api/conf", RestResponse.class);
     }
 }
