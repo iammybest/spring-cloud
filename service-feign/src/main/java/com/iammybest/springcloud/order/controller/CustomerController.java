@@ -12,14 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api")
 public class CustomerController {
 
-//    @Value("${foo}")
-//    String foo;
-
     @Autowired
     private ServiceOrder serviceOrder;
 
-    //    @Autowired
-//    private ServicePay servicePay;
     @RequestMapping(value = "/order/create", method = RequestMethod.GET)
     public String createOrder(@RequestParam String productId) {
         return serviceOrder.createOrder(getSessionUserName(), productId) + " Running on " /*+ foo*/;
