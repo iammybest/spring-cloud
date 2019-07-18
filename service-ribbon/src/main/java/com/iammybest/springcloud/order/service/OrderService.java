@@ -12,7 +12,7 @@ public class OrderService {
     RestTemplate restTemplate;
     @HystrixCommand(fallbackMethod = "hiError")
     public String hiService(String name) {
-        return restTemplate.getForObject("http://SERVICE-ORDER/api/order/create?name="+name+"&productId=1",String.class);
+        return restTemplate.getForObject("http://SERVICE-FEIGN/api/order/create?name="+name+"&productId=1",String.class);
     }
     public String hiError(String name){
         return "Hi "+name+",service is error!";
