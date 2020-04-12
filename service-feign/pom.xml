@@ -11,7 +11,7 @@
 
     <parent>
         <groupId>com.iammybest.springcloud</groupId>
-        <artifactId>spring-cloud-parent</artifactId>
+        <artifactId>iammybest-spring-cloud</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <dependencies>
