@@ -1,5 +1,6 @@
 package com.iammybest.springcloud.commons;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  * @date 2017/11/17
  * @Time 18:12
  */
-public class RestResponse<T>{
+public class RestResponse<T> implements Serializable {
     public Integer code;
     public String msg;
     public T data;

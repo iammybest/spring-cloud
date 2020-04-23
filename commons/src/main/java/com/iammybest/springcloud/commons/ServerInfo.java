@@ -1,5 +1,6 @@
 package com.iammybest.springcloud.commons;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  * @date 2017/11/17
  * @Time 18:18
  */
-public class ServerInfo {
+public class ServerInfo implements Serializable {
     Integer port;
     String serverName;
     String des;

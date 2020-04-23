@@ -3,11 +3,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8765
+  port: 8766
 spring:
   application:
     #service-feign 消费者名称 示例指定为消费者 顾客角色
-    name: service-feign
+    name: service-feign-consumer
 feign:
   hystrix:
     enabled: true

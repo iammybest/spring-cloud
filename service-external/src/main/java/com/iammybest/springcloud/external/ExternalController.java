@@ -4,9 +4,12 @@ import com.iammybest.springcloud.commons.RestResponse;
 import com.iammybest.springcloud.commons.ServerInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 
 /**
@@ -35,15 +38,15 @@ public class ExternalController {
     @Value("${spring.application.name}")
     String serverName;
 
-    @Autowired
+    @Resource
     RestTemplate restTemplate;
 
-    @RequestMapping("/conf")
+    @GetMapping("/conf")
     public RestResponse config() {
         return new RestResponse().setCode(1000).setMsg("success").setData(new ServerInfo(port, serverName).setVersion(version));
     }
 
-    @RequestMapping("/internal/conf")
+    @GetMapping("/internal/conf")
     public RestResponse internalConfig() {
         /**
          * 调用服务接口

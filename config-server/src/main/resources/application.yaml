@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+#TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+logging:
+  level:
+    root: info
+    com.iammybest.springcloud.config: info

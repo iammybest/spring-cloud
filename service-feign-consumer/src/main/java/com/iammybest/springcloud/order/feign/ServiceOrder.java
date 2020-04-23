@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 服务消费方
  */
 //指定 服务  value
-@FeignClient(value = "service-order",fallback = ServiceOrderHystric.class)
+@FeignClient(value = "SERVICE-INTERNAL",fallback = ServiceOrderHystric.class)
 public interface ServiceOrder {
     @RequestMapping(value = "/api/order/create", method = RequestMethod.GET)
     String createOrder(@RequestParam(value = "name") String name,@RequestParam(value = "productId") String productId);

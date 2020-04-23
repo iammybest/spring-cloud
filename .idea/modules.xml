@@ -7,10 +7,18 @@
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/iammybest-spring-cloud.iml" filepath="$PROJECT_DIR$/iammybest-spring-cloud.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-feign/service-feign.iml" filepath="$PROJECT_DIR$/service-feign/service-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-zipkin/server-zipkin.iml" filepath="$PROJECT_DIR$/server-zipkin/server-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-db-mybatis/service-db-mybatis.iml" filepath="$PROJECT_DIR$/service-db-mybatis/service-db-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-external/service-external.iml" filepath="$PROJECT_DIR$/service-external/service-external.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-fdfs/service-fdfs.iml" filepath="$PROJECT_DIR$/service-fdfs/service-fdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-feign-consumer/service-feign-consumer.iml" filepath="$PROJECT_DIR$/service-feign-consumer/service-feign-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-feign-provider/service-feign-provider.iml" filepath="$PROJECT_DIR$/service-feign-provider/service-feign-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-internal/service-internal.iml" filepath="$PROJECT_DIR$/service-internal/service-internal.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-ribbon/service-ribbon.iml" filepath="$PROJECT_DIR$/service-ribbon/service-ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-zuul/service-zuul.iml" filepath="$PROJECT_DIR$/service-zuul/service-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util-redis-lock/uitl-redis-lock.iml" filepath="$PROJECT_DIR$/util-redis-lock/uitl-redis-lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util-hbase/util-hbase.iml" filepath="$PROJECT_DIR$/util-hbase/util-hbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util-kafka/util-kafka.iml" filepath="$PROJECT_DIR$/util-kafka/util-kafka.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    #是否将自己注册到eureka
+    register-with-eureka: true
+    #是否从Eureka Server获取注册信息，默认为true。
+    fetch-registry: true
+
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      server:
+        git:
+          password: ''
+          searchPaths: configs
+          uri: https://github.com/iammybest/spring-cloud
+          username: ''

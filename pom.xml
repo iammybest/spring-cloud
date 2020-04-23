@@ -12,7 +12,8 @@
         <module>service-db-mybatis</module>
         <module>service-external</module>
         <module>service-fdfs</module>
-        <module>service-feign</module>
+        <module>service-feign-provider</module>
+        <module>service-feign-consumer</module>
         <module>eureka-server</module>
         <module>service-internal</module>
         <module>config-server</module>
