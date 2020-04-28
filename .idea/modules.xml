@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/iammybest-spring-cloud.iml" filepath="$PROJECT_DIR$/iammybest-spring-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-zipkin/server-zipkin.iml" filepath="$PROJECT_DIR$/server-zipkin/server-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-auth/service-auth.iml" filepath="$PROJECT_DIR$/service-auth/service-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-db-mybatis/service-db-mybatis.iml" filepath="$PROJECT_DIR$/service-db-mybatis/service-db-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-external/service-external.iml" filepath="$PROJECT_DIR$/service-external/service-external.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-fdfs/service-fdfs.iml" filepath="$PROJECT_DIR$/service-fdfs/service-fdfs.iml" />

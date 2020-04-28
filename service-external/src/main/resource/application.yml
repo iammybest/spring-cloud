@@ -1,0 +1,11 @@
+audi:
+  token:
+    cdp-user-token:
+      #若不配置 不添加拦截器
+      path-patterns: '/public/api/*,
+                      /*/public/api/*'
+      exclude-path-patterns:
+    admin-token:
+      #若不配置 不添加拦截器
+      path-patterns: '/admin/api/*'
+      exclude-path-patterns: '/admin/api/conf'

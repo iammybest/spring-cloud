@@ -12,9 +12,9 @@
         <module>service-db-mybatis</module>
         <module>service-external</module>
         <module>service-fdfs</module>
-        <module>service-feign-provider</module>
         <module>service-feign-consumer</module>
         <module>eureka-server</module>
+        <module>service-external</module>
         <module>service-internal</module>
         <module>config-server</module>
         <module>service-ribbon</module>
@@ -168,13 +168,6 @@
                 <artifactId>app-security-util</artifactId>
                 <version>${app-security-util.version}</version>
             </dependency>
-
-            <!-- spring -->
-            <!--            <dependency>-->
-            <!--                <groupId>de.codecentric</groupId>-->
-            <!--                <artifactId>spring-boot-admin-starter-client</artifactId>-->
-            <!--                <version>${spring-boot-admin.version}</version>-->
-            <!--            </dependency>-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -187,18 +180,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!--            <dependency>-->
-            <!--                <groupId>org.springframework</groupId>-->
-            <!--                <artifactId>spring-core</artifactId>-->
-            <!--                <version>${spring.version}</version>-->
-            <!--                <exclusions>-->
-            <!--                    &lt;!&ndash; 由于JCL的运行时查找实现类存在很多问题，Spring官方文档建议不再使用该框架，改由slf4j来输出日志 &ndash;&gt;-->
-            <!--                    <exclusion>-->
-            <!--                        <groupId>commons-logging</groupId>-->
-            <!--                        <artifactId>commons-logging</artifactId>-->
-            <!--                    </exclusion>-->
-            <!--                </exclusions>-->
-            <!--            </dependency>-->
             <dependency>
                 <!-- 通过BOM文件的方式引入spring boot，如果需要覆盖该BOM引入的包，请在该BOM之前定义需要覆盖的包 -->
                 <groupId>org.springframework.boot</groupId>
@@ -215,6 +196,25 @@
                 <scope>import</scope>
             </dependency>
             <!-- spring end -->
+            <dependency>
+                <groupId>com.timanetworks.audi</groupId>
+                <artifactId>tima-audi-core</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-web</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

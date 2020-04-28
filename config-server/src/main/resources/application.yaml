@@ -5,7 +5,7 @@ spring:
   application:
     name: config-server
   profiles:
-    active: git
+    active: native
 #TRACE < DEBUG < INFO < WARN < ERROR < FATAL
 logging:
   level:

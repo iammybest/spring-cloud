@@ -2,7 +2,8 @@ package com.iammybest.springcloud.external;
 
 import com.iammybest.springcloud.commons.RestResponse;
 import com.iammybest.springcloud.commons.ServerInfo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.timanetworks.audi.core.token.CdpTokenUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +22,9 @@ import javax.annotation.Resource;
  * @Time 18:09
  */
 @RestController
-@RequestMapping("/api")
-public class ExternalController {
+@RequestMapping("public/api")
+@Slf4j
+public class PublicController {
 
     /**
      * 远程配置服务器上获取配置
@@ -41,8 +43,9 @@ public class ExternalController {
     @Resource
     RestTemplate restTemplate;
 
-    @GetMapping("/conf")
+    @GetMapping("conf")
     public RestResponse config() {
+        log.info("***********PublicController******************{}", CdpTokenUtil.getCdpToken().getAid());
         return new RestResponse().setCode(1000).setMsg("success").setData(new ServerInfo(port, serverName).setVersion(version));
     }
 
@@ -51,6 +54,6 @@ public class ExternalController {
         /**
          * 调用服务接口
          */
-        return restTemplate.getForObject("http://SERVICE-INTERNAL/api/conf", RestResponse.class);
+        return restTemplate.getForObject("http://SERVICE-INTERNAL/service-internal/api/conf", RestResponse.class);
     }
 }
